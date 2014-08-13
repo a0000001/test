@@ -21,9 +21,9 @@ describe('assemble engines', function () {
     it('should set an engine with the given extension', function () {
       var handlebars = require('../lib/engine/handlebars');
       assemble.engine('hbs', handlebars);
-      should.exist(assemble.engines['.hbs']);
-      should.exist(assemble.engines['.hbs'].renderFile);
-      should.exist(assemble.engines['.hbs'].render);
+      should.exist(assemble.cache.engines['.hbs']);
+      should.exist(assemble.cache.engines['.hbs'].renderFile);
+      should.exist(assemble.cache.engines['.hbs'].render);
     });
 
     it('should set a lazy layout engine when setting an engine', function () {

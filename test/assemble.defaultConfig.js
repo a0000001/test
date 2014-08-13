@@ -50,8 +50,8 @@ describe('assemble defaultConfig', function () {
       assemble.get('parsers.hbs').should.exist;
       assemble.get('parsers.md').should.exist;
 
-      assemble.engines['.*'].should.exist;
-      assemble.engines['.md'].should.exist;
+      assemble.cache.engines['.*'].should.exist;
+      assemble.cache.engines['.md'].should.exist;
       assemble.highlighter.should.exist;
     });
   });
